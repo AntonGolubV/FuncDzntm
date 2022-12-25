@@ -1,0 +1,158 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Document</title>  
+</head>  
+<body>  
+    <script>  
+    /* Задание 1 */
+/* let obj =  
+   { 
+    model: 'audi',   
+    age: 2015, 
+    speed: 90, 
+    power: 300  
+   }  */
+; 
+/*  let list = document.createElement('ul'); 
+document.body.append(list); 
+
+for(let item in obj){ 
+   let li = document.createElement('li'); 
+   li.innerText = obj[item]; 
+   list.append(li); 
+}
+
+let ras = 2000;
+let time1 = document.createElement('li');
+function Base(a){
+let time = Math.floor(ras/(obj.speed));
+time1.innerText = `${time} часа`;
+list.append(time1);
+}
+Base(time1);
+console.log(time1);  */
+
+/*  Задание 2 */
+/*  let el = document.createElement('h1') ;
+let ras = 2000;
+
+function Base(a){
+let time = Math.floor(ras/(obj.speed)) - Math.floor(ras/(obj.speed)/3);
+el.innerText = `${time} часов`;
+document.body.append(el);
+}
+Base(el);
+console.log(el); */
+
+/* Задание 3 */
+/*  let arr = [{
+   name:'Петя',
+   gender:'M',
+   age:23
+},
+{
+   name:'Варя',
+   gender:'W',
+   age:24
+},
+{
+   name:'Оля',
+   gender:'W',
+   age:22
+}
+];
+let list = document.createElement('ul');
+document.body.append(list);
+let countM = 0;
+let countW = 0;
+function Mas(a){
+    for(let i = 0 ; i < arr.length; i++){
+    let li = document.createElement('li');
+   li.innerText = arr[i].name;
+   if(arr[i].gender == 'M'){
+       countM++;
+   }else{
+       countW++;
+   } 
+   list.append(li);
+};
+}
+Mas(arr);
+console.log(`мужчин ${countM}`);
+console.log(`женщин ${countW}`);
+
+let count = 0;
+let val = +prompt('Введите возраст');
+let el = document.createElement('h1');
+function Age(a){
+   for(let i = 0; i < arr.length; i++){
+    
+   if(arr[i].age >= val){
+       count++;
+   }
+   el.innerText = count;
+  
+}
+
+document.body.append(el);
+console.log(count);
+};
+
+Age(arr); 
+*/
+        /* Задание 4 */ 
+        let arr = []; 
+        let val = +prompt('Введите количество сотрудников'); 
+        let val2 = +prompt('Введите з/п'); 
+        let value = 0; 
+        let value1 = 0; 
+        function TaskA(a){ 
+            for(let i = 0; i < val; i++){  
+                let obj = {}; 
+                obj.name = prompt('Введите имя сотрудника'); 
+                obj.zp = +prompt('Введите з/п сотрудника'); 
+                arr.push(obj);           
+            } 
+        } 
+
+    function TaskB(){ 
+                for(let item of arr){ 
+                    if(item.zp > val2){ 
+                    console.log(item.zp); 
+                    console.log(item.name); 
+                    } 
+                } 
+            } 
+
+       function TaskC(){
+              for(let item of arr){
+                for(let key in item){
+                    if(key == 'zp'){
+                         value +=  item.zp;
+                    }
+                }
+            }
+                console.log(`сумма з/п ${value}`); 
+        }
+
+    function TaskD(){            
+            value1 = value/val;
+            console.log(`средняя зарплата сотрудников: ${value1}`);        
+        }
+            console.log(arr); 
+ 
+        TaskA(arr);  
+        TaskB(); 
+        TaskC();
+        TaskD();
+          
+     
+ 
+       
+    </script>  
+</body>  
+</html>
